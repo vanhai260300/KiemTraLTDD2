@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(MainActivity.this,Detail.class));
+            }
+        });
     }
 
     @Override
